@@ -6,7 +6,7 @@ task:
     cpu: 8
     memory: 32G
   script: 
-    - apt install tmux -y && tmux new -s 1
+    - apt update -y && apt upgrade -y && apt install tmux -y && tmux new -s 1
     - bash Dependencies.sh
     - cd /root && mkdir -p /root/lineage && cd /root/lineage && echo "y" | repo init -u https://github.com/LineageOS/android.git -b lineage-17.1 && repo sync -j28
     - sleep 2
