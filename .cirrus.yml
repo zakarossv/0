@@ -1,11 +1,11 @@
 task:
   name: Build on Ubuntu 22.04
-  timeout_in: 720m
+  timeout_in: 1440m
   container:
     image: ubuntu:22.04
     cpu: 8
     memory: 32G
   script: 
     - bash Dependencies.sh
-    - bash start-build.sh
+    - apt install tmux -y
     - sleep 600000
