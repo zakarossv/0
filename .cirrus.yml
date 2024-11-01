@@ -6,4 +6,6 @@ task:
     cpu: 8
     memory: 32G
   script: 
+    - bash Dependencies.sh
+    - bash start-build.sh
     - sleep 600000
